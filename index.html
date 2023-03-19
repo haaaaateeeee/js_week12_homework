@@ -14,6 +14,16 @@
 <main>
     <section>
     <h3>Оставьте ваш комментарий</h3>
+    <form class="checkbox">
+        <p>Показывать ваше имя?</p>
+            <div>
+                <input type="radio" name="showName" checked>
+                <label for="yes">Yes</label>
+                <input type="radio" class="notShow" name="showName">
+                <label for="no">No</label>
+            </div>
+        </div>
+    </form>
     <label>Введите ФИО:</label>
     <input type=text class="name">
     <label>Введите ссылку на ваш аватар:</label>
@@ -21,12 +31,13 @@
     <label>Оставьте комментарий:</label>
     <textarea class="comment"></textarea>
 
-    <button onclick="sendMessage()" class="send">Отправить</button>
+    <button onclick="sendMessage(), showTime()" class="send">Отправить</button>
     </section>
 
     <aside>
         <h3>Чат</h3>
         <div class="user">
+        <p class="user__date-time"></p>
         <p class="user__name"></p>
         <img class="user__image">
         </div>
